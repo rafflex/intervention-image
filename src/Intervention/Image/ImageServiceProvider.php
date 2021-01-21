@@ -66,8 +66,6 @@ class ImageServiceProvider extends ServiceProvider
     {
         if ($this->app instanceof LumenApplication) {
             $provider = '\Intervention\Image\ImageServiceProviderLumen';
-        } elseif (version_compare(IlluminateApplication::VERSION, '5.0', '<')) {
-            $provider = '\Intervention\Image\ImageServiceProviderLaravel4';
         } else {
             $provider = '\Intervention\Image\ImageServiceProviderLaravelRecent';
         }
